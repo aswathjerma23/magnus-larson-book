@@ -1,0 +1,24 @@
+plugins {
+    id 'java-library'
+}
+
+group = 'se.magnus.microservices.api'
+version = '1.0.0-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // ✅ Version alignment
+    api platform("org.springframework.boot:spring-boot-dependencies:3.5.1")
+
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'org.springdoc:springdoc-openapi-starter-common:2.1.0'
+}

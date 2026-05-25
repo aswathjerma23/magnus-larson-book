@@ -1,0 +1,31 @@
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
+}
+
+rootProject.name = "microservices"
+
+include(
+    "product-service",
+    "product-composite-service",
+    "review-service",
+    "recommendation-service",
+    "api",
+    "util"
+)
+
+/* microservices location */
+project(":product-service").projectDir =
+        file("microservices/product-service")
+
+project(":product-composite-service").projectDir =
+        file("microservices/product-composite-service")
+
+project(":review-service").projectDir =
+        file("microservices/review-service")
+
+project(":recommendation-service").projectDir =
+        file("microservices/recommendation-service")
+
+/* root-level modules */
+project(":api").projectDir = file("api")
+project(":util").projectDir = file("util")
