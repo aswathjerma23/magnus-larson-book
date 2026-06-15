@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 import se.magnus.api.core.recommendation.Recommendation;
@@ -18,7 +17,6 @@ public class RecommendationServiceImpl implements RecommendationService {
     private final static Logger LOG = LoggerFactory.getLogger(RecommendationServiceImpl.class);
     public final ServiceUtil serviceUtil;
 
-    @Autowired
     public RecommendationServiceImpl(ServiceUtil serviceUtil) {
         this.serviceUtil = serviceUtil;
     }

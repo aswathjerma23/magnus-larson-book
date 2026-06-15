@@ -26,6 +26,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
@@ -51,6 +52,7 @@ import util.http.HttpErrorInfo;
  * but instead of accessing a database,
  * it CALLS OTHER MICROSERVICES using HTTP.
  */
+@Component
 public class ProductCompositeIntegration
         implements ProductService, RecommendationService, ReviewService {
 
@@ -105,8 +107,8 @@ public class ProductCompositeIntegration
             @Value("${app.recommendation-service.host}") String recommendationServiceHost,
             @Value("${app.recommendation-service.port}") String recommendationServicePort,
 
-            @Value("${review-service.host}") String reviewServiceHost,
-            @Value("${review-service.port}") String reviewServicePort
+            @Value("${app.review-service.host}") String reviewServiceHost,
+            @Value("${app.review-service.port}") String reviewServicePort
     ) {
 
         this.restTemplate = restTemplate;

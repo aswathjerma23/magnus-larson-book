@@ -3,9 +3,8 @@ package util.http;
 import java.time.ZonedDateTime;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Component;
 
-@Component
+
 public class HttpErrorInfo {
     private final ZonedDateTime timeStamp;
     private final String path;

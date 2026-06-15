@@ -15,6 +15,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -28,7 +29,7 @@ public class ProductCompositeServiceImpl implements ProductCompositeService{
     }
 
     @Override
-    public ProductAggregate getProduct(int productId){
+    public ProductAggregate getProduct(@PathVariable("product-id") int productId){
         Product product = productCompositeIntegration.getProduct(productId);
 
         if(product == null){

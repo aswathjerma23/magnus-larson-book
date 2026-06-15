@@ -5,7 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("se.magnus")
+@ComponentScan(basePackages = {"se.magnus",
+	"util.http"
+})
 public class ProductServiceApplication {
 
 	public static void main(String[] args) {

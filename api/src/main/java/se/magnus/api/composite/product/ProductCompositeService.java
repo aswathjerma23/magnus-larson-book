@@ -8,6 +8,6 @@ public interface ProductCompositeService {
         value = "/product-composite/{product-id}",
         produces = "application/json"
     )
-    ProductAggregate getProduct(@PathVariable int productId);
+    ProductAggregate getProduct(@PathVariable("product-id") int productId);
 
 }

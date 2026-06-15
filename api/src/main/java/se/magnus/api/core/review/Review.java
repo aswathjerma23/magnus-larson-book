@@ -8,7 +8,16 @@ public class Review {
     private final String content;
     private final String serviceAddress;
 
-    public Review(int productId, int reviewId, String author, String subject,String content, String serviceAddress){
+    public Review() {
+        productId = 0;
+        reviewId = 0;
+        author = null;
+        subject = null;
+        content = null;
+        serviceAddress = null;
+    }
+
+    public Review(int productId, int reviewId, String author, String subject, String content, String serviceAddress) {
         this.productId = productId;
         this.reviewId = reviewId;
         this.author = author;
@@ -17,22 +26,27 @@ public class Review {
         this.serviceAddress = serviceAddress;
     }
 
-    public int getProductId(){
+    public int getProductId() {
         return this.productId;
     }
-    public int getReviewId(){
+
+    public int getReviewId() {
         return this.reviewId;
     }
-    public String getAuthor(){
+
+    public String getAuthor() {
         return this.author;
     }
-    public String getSubject(){
+
+    public String getSubject() {
         return this.subject;
     }
-    public String getContent(){
+
+    public String getContent() {
         return this.content;
     }
-    public String getServiceAddress(){
+
+    public String getServiceAddress() {
         return this.serviceAddress;
     }
 

@@ -8,7 +8,17 @@ public class Recommendation {
     private final String content;
     private final String serviceAddress;
 
-    public Recommendation(int productId,int recommendationId,String author,int rate,String content,String serviceAddress){
+    public Recommendation() {
+        productId = 0;
+        recommendationId = 0;
+        author = null;
+        rate = 0;
+        content = null;
+        serviceAddress = null;
+    }
+
+    public Recommendation(int productId, int recommendationId, String author, int rate, String content,
+            String serviceAddress) {
         this.productId = productId;
         this.recommendationId = recommendationId;
         this.author = author;
@@ -17,27 +27,27 @@ public class Recommendation {
         this.serviceAddress = serviceAddress;
     }
 
-    public int getProductId(){
+    public int getProductId() {
         return this.productId;
-    }    
+    }
 
-    public int getRecommendationId(){
+    public int getRecommendationId() {
         return this.recommendationId;
     }
 
-    public String getAuthor(){
+    public String getAuthor() {
         return this.author;
     }
 
-    public int getRate(){
+    public int getRate() {
         return this.rate;
     }
 
-    public String getContent(){
+    public String getContent() {
         return this.content;
     }
-    
-    public String getServiceAddress(){
+
+    public String getServiceAddress() {
         return this.serviceAddress;
     }
 
