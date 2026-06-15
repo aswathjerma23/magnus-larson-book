@@ -1,6 +1,7 @@
 spring:
   application:
     name: product-composite-service
+server.port: 7000
 app:
   product-service:
     host: localhost

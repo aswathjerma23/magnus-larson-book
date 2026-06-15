@@ -3,14 +3,14 @@ package util.http;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ServiceUtil {
     private final String port;
     private String serviceAddress = null;
 
-    @Autowired
     public ServiceUtil(@Value("${server.port}") String port){
         this.port = port;
     }
