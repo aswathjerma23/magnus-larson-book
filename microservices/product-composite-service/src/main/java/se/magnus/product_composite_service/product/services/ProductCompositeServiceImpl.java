@@ -29,7 +29,7 @@ public class ProductCompositeServiceImpl implements ProductCompositeService{
     }
 
     @Override
-    public ProductAggregate getProduct(@PathVariable("product-id") int productId){
+    public ProductAggregate getProduct(@PathVariable("productId") int productId){
         Product product = productCompositeIntegration.getProduct(productId);
 
         if(product == null){

@@ -27,7 +27,6 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
@@ -218,7 +217,7 @@ public class ProductCompositeIntegration
         try {
             String url = recommendationServiceUrl + productId;
 
-            LOG.debug("Will call getRecommendations API on URL: {}", url);
+            LOG.info("Will call getRecommendations API on URL: {}", url);
 
             /*
              * restTemplate.exchange is used instead of getForObject
@@ -235,7 +234,7 @@ public class ProductCompositeIntegration
                             new ParameterizedTypeReference<List<Recommendation>>() {}
                     ).getBody();
 
-            LOG.debug(
+            LOG.info(
                     "Found {} recommendations for product id: {}",
                     recommendations.size(),
                     productId

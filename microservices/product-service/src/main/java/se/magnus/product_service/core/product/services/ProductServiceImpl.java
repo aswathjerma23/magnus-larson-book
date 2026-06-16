@@ -10,6 +10,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product getProduct(int productId) {
+        
         return new Product(123, "Shirt",212, "Uttar pradesh");
     }
 

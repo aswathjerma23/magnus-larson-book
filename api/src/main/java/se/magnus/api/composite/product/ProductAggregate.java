@@ -36,7 +36,7 @@ public class ProductAggregate {
     public List<ReviewSummary> getReviewSummaries(){
         return this.reviews;
     }
-    public  List<RecommendationSummary> geRecommendationSummaries(){
+    public  List<RecommendationSummary> getRecommendationSummaries(){
         return this.recommendations;
     }
     public ServiceAddresses getServiceAddresses(){
